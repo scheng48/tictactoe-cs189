@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGR-5W-Za8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToeBetterEdition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-5j-ScL">
+                                <rect key="frame" x="109" y="305" width="197" height="95"/>
+                                <state key="normal" title="Play" image="Play"/>
+                                <connections>
+                                    <action selector="goPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ao6-FR-Zne"/>
+                                    <action selector="goToAbout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2k-oz-VnT"/>
+                                    <segue destination="TOZ-MI-4Qe" kind="show" id="4nc-Ml-YDt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="rDn-QK-J6H">
+                                <rect key="frame" x="20" y="130" width="374" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxK-Gb-6kg">
+                                <rect key="frame" x="109" y="443" width="197" height="95"/>
+                                <state key="normal" title="About" image="About"/>
+                                <connections>
+                                    <action selector="goToAbout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDh-Zq-bFk"/>
+                                    <segue destination="pAo-U1-W7E" kind="show" id="zqR-Go-qOp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="buT-dX-HFk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="JxK-Gb-6kg" id="FOT-sh-5cR"/>
+                        <outlet property="playButton" destination="a0Y-5j-ScL" id="bOZ-9M-QXt"/>
+                        <outlet property="titleImage" destination="rDn-QK-J6H" id="e3Q-E8-Liz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="371"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="oI9-VT-7GJ">
+            <objects>
+                <viewController id="DAJ-mq-gY3" customClass="PlayViewController" customModule="TicTacToeBetterEdition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bP8-au-Gq0"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUI-42-PLe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C8B-vn-kUh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-fC-DY1">
+                                <rect key="frame" x="267" y="230" width="120" height="120"/>
+                                <state key="normal" title="5" image="5"/>
+                                <connections>
+                                    <action selector="button5Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="atU-Ad-XaD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja0-Ou-x8o">
+                                <rect key="frame" x="27" y="110" width="120" height="120"/>
+                                <state key="normal" title="0" image="0"/>
+                                <connections>
+                                    <action selector="button0Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="EW7-zA-E8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-WQ-xjW">
+                                <rect key="frame" x="27" y="230" width="120" height="120"/>
+                                <state key="normal" title="3" image="3"/>
+                                <connections>
+                                    <action selector="button3Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="a01-1k-13w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-vl-odt">
+                                <rect key="frame" x="27" y="350" width="120" height="120"/>
+                                <state key="normal" title="6" image="6"/>
+                                <connections>
+                                    <action selector="button6Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="r8O-dM-QFR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sek-En-Nlp">
+                                <rect key="frame" x="147" y="350" width="120" height="120"/>
+                                <state key="normal" title="7" image="7"/>
+                                <connections>
+                                    <action selector="button7Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="Bag-kO-gsC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXP-Sh-kk1">
+                                <rect key="frame" x="147" y="230" width="120" height="120"/>
+                                <state key="normal" title="4" image="4"/>
+                                <connections>
+                                    <action selector="button4Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="EVb-cL-kLS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-15-sZ3">
+                                <rect key="frame" x="267" y="350" width="120" height="120"/>
+                                <state key="normal" title="8" image="8"/>
+                                <connections>
+                                    <action selector="button8Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="wrX-rQ-gwF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-W9-m5w">
+                                <rect key="frame" x="147" y="110" width="120" height="120"/>
+                                <state key="normal" title="1" image="1"/>
+                                <connections>
+                                    <action selector="button1Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="To5-P9-XsL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnn-qE-a5L">
+                                <rect key="frame" x="534" y="550" width="46" height="30"/>
+                                <state key="normal" title="Quit"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gON-MV-Dif">
+                                <rect key="frame" x="267" y="110" width="120" height="120"/>
+                                <state key="normal" title="2" image="2"/>
+                                <connections>
+                                    <action selector="button2Press:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="CcO-KB-sKq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-sy-r0k">
+                                <rect key="frame" x="325" y="662" width="42" height="30"/>
+                                <state key="normal" title="Quit :("/>
+                                <connections>
+                                    <action selector="quitGame:" destination="DAJ-mq-gY3" eventType="touchUpInside" id="HU6-Bf-6We"/>
+                                    <segue destination="RGR-5W-Za8" kind="show" id="Iot-lM-4db"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BC7-FL-cXS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="button0" destination="ja0-Ou-x8o" id="ZLF-5V-5Qc"/>
+                        <outlet property="button1" destination="bTk-W9-m5w" id="bcd-Kd-TDQ"/>
+                        <outlet property="button2" destination="gON-MV-Dif" id="fyk-Xc-X7z"/>
+                        <outlet property="button3" destination="FWe-WQ-xjW" id="Fai-oH-ZPl"/>
+                        <outlet property="button4" destination="RXP-Sh-kk1" id="tRH-9I-ZkJ"/>
+                        <outlet property="button5" destination="K6v-fC-DY1" id="5Fb-7M-x0v"/>
+                        <outlet property="button6" destination="bNO-vl-odt" id="fcO-cD-wXS"/>
+                        <outlet property="button7" destination="Sek-En-Nlp" id="aod-d2-NGz"/>
+                        <outlet property="button8" destination="Tnc-15-sZ3" id="6wb-dq-lpT"/>
+                        <outlet property="quitButton" destination="udR-sy-r0k" id="jqG-Lc-nh4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjG-ND-Bwy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432" y="346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ptd-m7-bVd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TOZ-MI-4Qe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QwV-1h-G6u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DAJ-mq-gY3" kind="relationship" relationship="rootViewController" id="G9o-nE-8F2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXH-ea-r1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="346"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="j7h-3x-FvJ">
+            <objects>
+                <viewController id="xlc-4m-Pjw" customClass="AboutViewController" customModule="TicTacToeBetterEdition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BqC-P9-NNG"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdd-1E-LTG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAe-1K-KK9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHI-uU-CZh">
+                                <rect key="frame" x="20" y="111" width="374" height="340"/>
+                                <string key="text">This is a really simple version of the game of tic tac toe created using Swift 2 and Xcode. It looks like crap but I made it and it works so I guess it's okay. I hope it's playable and I might add more features (1-player with AI or something) in the future.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqZ-m8-EFK">
+                                <rect key="frame" x="190" y="459" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="xlc-4m-Pjw" eventType="touchUpInside" id="Ee2-tE-V7N"/>
+                                    <segue destination="RGR-5W-Za8" kind="show" id="LvK-Gc-gvz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B0N-v2-Exm"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="aboutText" destination="zHI-uU-CZh" id="ku0-iE-v5E"/>
+                        <outlet property="backButton" destination="tqZ-m8-EFK" id="qCq-7n-3gL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHU-tR-gyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552" y="1188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ciz-gW-Zcj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RGR-5W-Za8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QDY-dQ-JCE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ECP-RK-kvh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsY-9A-Hda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="371"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L9E-cu-MJH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pAo-U1-W7E" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ZN-Nv-nGk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xlc-4m-Pjw" kind="relationship" relationship="rootViewController" id="XBr-Bh-hMW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeX-EK-Ka7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="1188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0" width="1024" height="1024"/>
+        <image name="1" width="1024" height="1024"/>
+        <image name="2" width="1024" height="1024"/>
+        <image name="3" width="1024" height="1024"/>
+        <image name="4" width="1024" height="1024"/>
+        <image name="5" width="1024" height="1024"/>
+        <image name="6" width="1024" height="1024"/>
+        <image name="7" width="1024" height="1024"/>
+        <image name="8" width="1024" height="1024"/>
+        <image name="About" width="300" height="150"/>
+        <image name="Play" width="300" height="150"/>
+        <image name="Title" width="600" height="150"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LvK-Gc-gvz"/>
+    </inferredMetricsTieBreakers>
+</document>
